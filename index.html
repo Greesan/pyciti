@@ -57,14 +57,13 @@
     statusChangeCallback(response);
   });
   console.log(FB.api("/me/feed",function (response) 
+  {
+	if (response && !response.error)
 	{
-		if (response && !response.error)
-		{
-       	 		/* handle the result */
-     	 	}
-  	}
-	);)
-  };
+       	 	/* handle the result */
+     	}
+  }
+  ););
 
   // Load the SDK asynchronously
   (function(d, s, id) {
