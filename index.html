@@ -75,15 +75,10 @@
       console.log('Successful login for: ' + response.name);
       document.getElementById('status').innerHTML =
         'Thanks for logging in, ' + response.name + '!';
-    FB.api("/me/feed",function (response) 
-    {
-	if (response && !response.error)
-	{
-       	 	console.log(response)
-     	}
-    });
-	});
-  }
+    };
+    FB.api("/me",function (response) {
+      console.log(response.user_posts);
+    };
 </script>
 
 <!--
