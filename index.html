@@ -56,12 +56,12 @@
   FB.getLoginStatus(function(response) {
     statusChangeCallback(response);
   });
-  FB.api("/me/feed", function (response)
+  console.log(FB.api("/me/feed", function (response)
 	{if (response && !response.error) 
 		{/* handle the result */
       		}
     	})
-  };
+  });
 
   // Load the SDK asynchronously
   (function(d, s, id) {
