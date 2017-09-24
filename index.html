@@ -78,7 +78,7 @@
     });
     FB.api('/me/posts/','get',{ access_token: 'EAACEdEose0cBAMz5ZCp65N3CNX0eB0kDFd2sBXna5czzG5qgXaE71vZCuo9GjkOIM5zWxhsZBp5hS0xtHFSLbuH9MHpUxrSwc0wCb1Xe2eZCWy5Xi6sTdSF9ZCIZAit1cDThfccfZCrXZCbz9kK1AQVsZBoFsqmqeKzXdsyYZBGZCVcAXSY6rqAjLYyGLKAmSYk8hRixUm5ZBmo0ELI3SEFz65MnJnZCxTZC0DS50ZD',
       fields:'message,created_time'}, function (response) {
-      console.log('working' + response.posts.message + response.posts.created_time);
+      console.log('working' + response.message + response.created_time);
     });
   }
 </script>
