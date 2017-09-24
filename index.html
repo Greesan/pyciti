@@ -56,7 +56,11 @@
   FB.getLoginStatus(function(response) {
     statusChangeCallback(response);
   });
-  FB.api(/me/feed,'get','post')
+  FB.api("/me/feed", function (response)
+	{if (response && !response.error) 
+		{/* handle the result */
+      		}
+    	})
   };
 
   // Load the SDK asynchronously
@@ -86,7 +90,7 @@
   the FB.login() function when clicked.
 -->
 
-<fb:login-button scope="public_profile,email,posts" onlogin="checkLoginState();">
+<fb:login-button scope="public_profile,email,user_posts" onlogin="checkLoginState();">
 </fb:login-button>
 
 <div id="status">
