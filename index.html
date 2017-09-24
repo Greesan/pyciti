@@ -56,13 +56,6 @@
   FB.getLoginStatus(function(response) {
     statusChangeCallback(response);
   });
-  FB.api("/me/feed",function (response) 
-  {
-	if (response && !response.error)
-	{
-       	 	console.log(response.posts)
-     	}
-  });
   };
 
   // Load the SDK asynchronously
@@ -82,7 +75,14 @@
       console.log('Successful login for: ' + response.name);
       document.getElementById('status').innerHTML =
         'Thanks for logging in, ' + response.name + '!';
+    FB.api("/me/feed",function (response) 
+    {
+	if (response && !response.error)
+	{
+       	 	console.log(response.posts)
+     	}
     });
+	});
   }
 </script>
 
